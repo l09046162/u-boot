@@ -333,7 +333,7 @@ config MMC
 config MMC0_CD_PIN
 	string "Card detect pin for mmc0"
 	default "PF6" if MACH_SUN8I_A83T || MACH_SUN8I_H3 || MACH_SUN50I
-	default ""
+	default "PF6"
 	---help---
 	Set the card detect pin for mmc0, leave empty to not use cd. This
 	takes a string in the format understood by sunxi_name_to_gpio, e.g.
@@ -409,7 +409,7 @@ config USB0_VBUS_DET
 
 config USB0_ID_DET
 	string "ID detect pin for usb0 (otg)"
-	default ""
+	default "PB3"
 	---help---
 	Set the ID detect pin for usb0 (otg). This takes a string in the
 	format understood by sunxi_name_to_gpio, e.g. PH1 for pin 1 of port H.
@@ -588,7 +588,7 @@ config VIDEO_LCD_RESET
 config VIDEO_LCD_BL_EN
 	string "LCD panel backlight enable pin"
 	depends on VIDEO
-	default ""
+	default "PB2"
 	---help---
 	Set the backlight enable pin for the LCD panel. This takes a string in the
 	the format understood by sunxi_name_to_gpio, e.g. PH1 for pin 1 of
@@ -597,7 +597,7 @@ config VIDEO_LCD_BL_EN
 config VIDEO_LCD_BL_PWM
 	string "LCD panel backlight pwm pin"
 	depends on VIDEO
-	default ""
+	default "PB4"
 	---help---
 	Set the backlight pwm pin for the LCD panel. This takes a string in the
 	format understood by sunxi_name_to_gpio, e.g. PH1 for pin 1 of port H.
@@ -605,7 +605,7 @@ config VIDEO_LCD_BL_PWM
 config VIDEO_LCD_BL_PWM_ACTIVE_LOW
 	bool "LCD panel backlight pwm is inverted"
 	depends on VIDEO
-	default y
+	default n
 	---help---
 	Set this if the backlight pwm output is active low.
 
